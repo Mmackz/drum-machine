@@ -10,22 +10,23 @@ function Controls(props) {
    }
 
    function togglePower() {
-      setOptions((state) => ({ ...state, powerOn: !powerOn }));
+      setOptions((state) => ({ ...state, powerOn: !powerOn, sound: "" }));
    }
 
    function toggleBank() {
-      powerOn && setOptions((state) => ({...state, bank: state.bank ? 0 : 1}))
+      powerOn &&
+         setOptions((state) => ({ ...state, bank: state.bank ? 0 : 1 }));
    }
 
    return (
       <Container>
-         
          <Switch label="Power" 
                  switchPosition={powerOn} 
-                 toggle={togglePower} />
+                 toggle={togglePower} 
+         />
 
          <Display>{sound}</Display>
-   
+
          <VolumeSlider
             onChange={setVolume}
             type="range"
@@ -34,11 +35,8 @@ function Controls(props) {
             value={volume}
             disabled={!powerOn}
          />
-         
-         <Switch label="Bank" 
-                 switchPosition={bank} 
-                 toggle={toggleBank} />
 
+         <Switch label="Bank" switchPosition={bank} toggle={toggleBank} />
       </Container>
    );
 }
