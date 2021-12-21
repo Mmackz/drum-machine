@@ -12,4 +12,3 @@ export const Container = styled.main`
       flex-direction: row;
    }
 `;
-
