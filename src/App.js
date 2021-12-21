@@ -1,7 +1,7 @@
 import { useState } from "react";
-import styled from 'styled-components'
-import Controls from "./components/Controls";
+import Controls from "./components/controls";
 import Keypad from "./components/Keypad";
+import { Container } from "./components/app/styles/app";
 import { bankOne, bankTwo } from "./drum-sounds";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
    });
 
    return (
-      <div className="container">
+      <Container>
          {/* {fcc: icon} */}
          <div className="icon-container">
             <span className="icon-text">FCC</span>
@@ -24,7 +24,7 @@ function App() {
          <Keypad />
          {/* {control center} */}
          <Controls options={options} setOptions={setOptions} />
-      </div>
+      </Container>
    );
 }
 

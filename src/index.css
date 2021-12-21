@@ -1,0 +1,12 @@
+*, 
+*::before, 
+*::after {
+   box-sizing: border-box;
+}
+
+body {
+   display: grid;
+   height: 100vh;
+   margin: 0;
+   place-items: center;
+}
