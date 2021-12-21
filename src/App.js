@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Controls from "./components/controls";
 import Keypad from "./components/Keypad";
-import { Container } from "./components/app/styles/app";
+import { Container, Icon, IconText, IconContainer } from "./components/app/styles/app";
 import { bank_0, bank_1 } from "./media/drum-sounds";
 
 function App() {
@@ -15,10 +15,10 @@ function App() {
    return (
       <Container>
          {/* {fcc: icon} */}
-         <div className="icon-container">
-            <span className="icon-text">FCC</span>
-            <i className="icon fab fa-free-code-camp"></i>
-         </div>
+         <IconContainer>
+            <IconText>FCC</IconText>
+            <Icon className={"icon fab fa-free-code-camp"} />
+         </IconContainer>
 
          {/* {keypad} */}
          <Keypad />
