@@ -1,11 +1,12 @@
 import { useState } from "react";
+import styled from 'styled-components'
 import Controls from "./components/Controls";
 import Keypad from "./components/Keypad";
 import { bankOne, bankTwo } from "./drum-sounds";
 
 function App() {
    const [options, setOptions] = useState({
-      powerOn: false,
+      powerOn: true,
       sound: "",
       volume: 30,
       bank: 0,
