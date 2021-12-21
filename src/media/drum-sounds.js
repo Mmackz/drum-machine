@@ -1,4 +1,4 @@
-export const bankOne = [
+export const bank_0 = [
    {
       keyCode: 81,
       keyTrigger: "Q",
@@ -55,7 +55,7 @@ export const bankOne = [
    },
 ];
 
-export const bankTwo = [
+export const bank_1 = [
    {
       keyCode: 81,
       keyTrigger: "Q",

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Controls from "./components/controls";
 import Keypad from "./components/Keypad";
 import { Container } from "./components/app/styles/app";
-import { bankOne, bankTwo } from "./drum-sounds";
+import { bank_0, bank_1 } from "./media/drum-sounds";
 
 function App() {
    const [options, setOptions] = useState({
