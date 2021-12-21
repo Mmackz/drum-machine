@@ -1,3 +1,4 @@
+import Switch from "../switch";
 import { Container } from "./styles/controls";
 
 function Controls(props) {
@@ -8,14 +9,16 @@ function Controls(props) {
       setOptions((state) => ({ ...state, volume: target.value }));
    }
 
+   function togglePower() {
+      setOptions((state) => ({ ...state, powerOn: !powerOn }));
+   }
+
    return (
       <Container>
-         <div className="switch-container">
-            <p className="switch-label">Power</p>
-            <div className="outer-switch">
-               <div className="inner-switch"></div>
-            </div>
-         </div>
+         
+         <Switch label="Power" 
+                 powerOn={powerOn} 
+                 togglePower={togglePower} />
 
          <p className="options-display">{sound}</p>
 
@@ -30,12 +33,8 @@ function Controls(props) {
             />
          </div>
 
-         <div className="switch-container">
-            <p className="switch-label">Bank</p>
-            <div className="outer-switch">
-               <div className="inner-switch"></div>
-            </div>
-         </div>
+         <Switch label="Bank" />
+
       </Container>
    );
 }
