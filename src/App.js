@@ -14,16 +14,16 @@ function App() {
 
    return (
       <Container>
-         {/* {fcc: icon} */}
+
          <IconContainer>
             <IconText>FCC</IconText>
-            <Icon className={"icon fab fa-free-code-camp"} />
+            <Icon className={"fab fa-free-code-camp"} />
          </IconContainer>
 
-         {/* {keypad} */}
          <Keypad />
-         {/* {control center} */}
+
          <Controls options={options} setOptions={setOptions} />
+
       </Container>
    );
 }
