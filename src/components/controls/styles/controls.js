@@ -12,9 +12,13 @@ export const Container = styled.section`
 export const Display = styled.p`
    width: 8.5rem;
    height: 2.25rem;
+   font-size: 0.8rem;
    background: gray;
    margin-bottom: 0;
    border-radius: 2px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 `
 
 export const VolumeSlider = styled.input`
