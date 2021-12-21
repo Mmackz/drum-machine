@@ -1,12 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 0.4rem;
-
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 0.75rem 0.4rem;
 `;
 
 export const Display = styled.p`
@@ -19,7 +18,7 @@ export const Display = styled.p`
    display: flex;
    align-items: center;
    justify-content: center;
-`
+`;
 
 export const VolumeSlider = styled.input`
    height: 2.5rem;
@@ -37,7 +36,7 @@ export const VolumeSlider = styled.input`
       cursor: pointer;
       box-shadow: 1px 1px 2px #000000;
       background: #3a3a3a;
-      border-radius:1.5px;
+      border-radius: 1.5px;
       border: 1px solid #000000;
    }
    &::-webkit-slider-thumb {
@@ -60,7 +59,7 @@ export const VolumeSlider = styled.input`
       cursor: pointer;
       box-shadow: 1px 1px 2px #000000;
       background: #4a4a4a;
-      border-radius:1.5px;
+      border-radius: 1.5px;
       border: 1px solid #000000;
    }
    &::-moz-range-thumb {
