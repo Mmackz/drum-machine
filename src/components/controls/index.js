@@ -1,5 +1,5 @@
 import Switch from "../switch";
-import { Container, VolumeSlider } from "./styles/controls";
+import { Container, Display, VolumeSlider } from "./styles/controls";
 
 function Controls(props) {
    const { options, setOptions } = props;
@@ -24,7 +24,7 @@ function Controls(props) {
                  switchPosition={powerOn} 
                  toggle={togglePower} />
 
-         <p className="options-display">{sound}</p>
+         <Display>{sound}</Display>
    
          <VolumeSlider
             onChange={setVolume}
