@@ -10,4 +10,5 @@ export const Button = styled.span`
    background: gray;
    border-radius: 5px;
    box-shadow: 2px 2px 4px black;
+   cursor: pointer;
 `;
