@@ -43,7 +43,7 @@ const bank_0 = [
       keyCode: 67,
       name: "Closed HH",
       url: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
-   }
+   },
 ];
 
 const bank_1 = [
@@ -91,7 +91,9 @@ const bank_1 = [
       keyCode: 67,
       name: "Snare",
       url: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3",
-   }
+   },
 ];
 
-export default [bank_0, bank_1];
+const banks = [bank_0, bank_1];
+
+export default banks;
