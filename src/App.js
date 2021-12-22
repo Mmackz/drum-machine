@@ -8,7 +8,7 @@ import banks from "./data/drum-sounds";
 function App() {
    const [options, setOptions] = useState({
       powerOn: true,
-      sound: "",
+      display: "",
       volume: 30,
       bank: 0
    });

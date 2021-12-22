@@ -11,7 +11,7 @@ function Key({ data, state }) {
          sound.volume = volume / 100;
          sound.currentTime = 0;
          sound.play();
-         setOptions(state => ({...state, sound: data.name}))
+         setOptions(state => ({...state, display: data.name}))
       }
    }
 
