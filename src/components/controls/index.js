@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Switch from "../switch";
 import { Container, Display, VolumeSlider } from "./styles/controls";
 
@@ -5,20 +6,27 @@ function Controls(props) {
    const { options, setOptions } = props.state;
    const { bank, powerOn, display, volume } = options;
 
+   useEffect(() => {
+      const delay = display.includes("Power") ? 2000 : 1000;
+      const timeout = setTimeout(clearDisplay, delay);
+
+      return () => clearTimeout(timeout);
+   }, [display]);
+
    function clearDisplay() {
       setOptions((state) => ({
          ...state,
-         display: state.display.includes("Power") ? "" : state.display
+         display: /^Power|^Volume/.test(state.display) ? "" : state.display
       }));
    }
 
    function togglePower() {
+      // clearTimeout(timeout)
       setOptions((state) => ({
          ...state,
          powerOn: !powerOn,
          display: powerOn ? "Power Off" : "Power On"
       }));
-      setTimeout(clearDisplay, 2000);
    }
 
    function toggleBank() {
@@ -32,7 +40,13 @@ function Controls(props) {
    }
 
    function setVolume({ target }) {
-      powerOn && setOptions((state) => ({ ...state, volume: target.value }));
+      if (powerOn) {
+         setOptions((state) => ({
+            ...state,
+            display: `Volume: ${target.value}`,
+            volume: target.value
+         }));
+      }
    }
 
    return (
