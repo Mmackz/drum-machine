@@ -21,7 +21,7 @@ function App() {
 
          <Keypad banks={banks} state={state} />
 
-         <Controls banks={banks} state={state} />
+         <Controls state={state} />
       </Container>
    );
 }
