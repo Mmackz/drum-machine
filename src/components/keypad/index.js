@@ -2,7 +2,9 @@ import Key from "../key";
 import { Pad } from "./styles/keypad";
 
 function Keypad(props) {
-   const { bank, state } = props;
+   const { banks, state } = props;
+
+   const bank = banks[state.options.bank];
 
    return (
       <Pad>

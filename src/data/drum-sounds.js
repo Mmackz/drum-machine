@@ -1,4 +1,4 @@
-export const bank_0 = [
+const bank_0 = [
    {
       keyCode: 81,
       name: "Heater 1",
@@ -43,10 +43,10 @@ export const bank_0 = [
       keyCode: 67,
       name: "Closed HH",
       url: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
-   },
+   }
 ];
 
-export const bank_1 = [
+const bank_1 = [
    {
       keyCode: 81,
       name: "Chord 1",
@@ -91,5 +91,7 @@ export const bank_1 = [
       keyCode: 67,
       name: "Snare",
       url: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3",
-   },
+   }
 ];
+
+export default [bank_0, bank_1];
