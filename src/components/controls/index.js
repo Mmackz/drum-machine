@@ -2,7 +2,7 @@ import Switch from "../switch";
 import { Container, Display, VolumeSlider } from "./styles/controls";
 
 function Controls(props) {
-   const { options, setOptions } = props;
+   const { options, setOptions } = props.state;
    const { bank, powerOn, sound, volume } = options;
 
    function setVolume({ target }) {

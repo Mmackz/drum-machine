@@ -13,13 +13,15 @@ function App() {
       bank: 0,
    });
 
+   const state = {options, setOptions}
+
    return (
       <Container>
          <Logo />
 
-         <Keypad bank={options.bank ? bank_1 : bank_0} />
+         <Keypad bank={options.bank ? bank_1 : bank_0} state={state} />
 
-         <Controls options={options} setOptions={setOptions} />
+         <Controls state={state} />
       </Container>
    );
 }
