@@ -7,26 +7,28 @@ function Controls(props) {
    const { bank, powerOn, display, volume } = options;
 
    useEffect(() => {
+      function clearDisplay() {
+         setOptions((state) => ({
+            ...state,
+            display: /^Power|^Volume/.test(state.display) ? "" : state.display
+         }));
+      }
       const delay = display.includes("Power") ? 2000 : 1000;
       const timeout = setTimeout(clearDisplay, delay);
-
       return () => clearTimeout(timeout);
-   }, [display]);
-
-   function clearDisplay() {
-      setOptions((state) => ({
-         ...state,
-         display: /^Power|^Volume/.test(state.display) ? "" : state.display
-      }));
-   }
+   }, [powerOn, display, setOptions]);
 
    function togglePower() {
-      // clearTimeout(timeout)
       setOptions((state) => ({
          ...state,
          powerOn: !powerOn,
          display: powerOn ? "Power Off" : "Power On"
       }));
+      powerOn &&
+         setTimeout(
+            () => setOptions((state) => ({ ...state, display: "" })),
+            250
+         );
    }
 
    function toggleBank() {
