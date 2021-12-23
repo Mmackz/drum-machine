@@ -9,16 +9,17 @@ export const Button = styled.span`
    justify-content: center;
    background: gray;
    border-radius: 5px;
-   box-shadow: 2px 2px 4px black;
+   box-shadow: 2.5px 3px 4px black;
    cursor: pointer;
 
    &.pressed {
       border-top: 3px solid #b3b3b3;
-      box-shadow: 1px 1px 1px #b3b3b3;
+      box-shadow: 1px 1px 1px black;
    }
 
    &.orange {
       background: orange;
       border-top: 3px solid orange;
+      box-shadow: 1px 1px 2px orange;
    }
 `;

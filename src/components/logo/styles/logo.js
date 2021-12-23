@@ -15,7 +15,7 @@ export const IconContainer = styled.div`
 `;
 
 export const IconText = styled.span`
-   font-size: 0.75rem;
+   font-size: 0.85rem;
    font-weight: bold;
    margin-right: 0.15rem;
 `;
