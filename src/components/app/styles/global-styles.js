@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = styled.createGlobalStyle`
-   @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+console.log(createGlobalStyle);
 
+export const GlobalStyles = createGlobalStyle`
+   
    *,
    *::before,
    *::after {
